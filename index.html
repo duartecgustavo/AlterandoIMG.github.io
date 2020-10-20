@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./CSS/styles.css'>
+    <script src='main.js'></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <img id="imagemSexo" src="./img/imagem.jpeg" alt="interrogação">
+        
+
+
+
+        <div class="footer">
+
+            <label for="feminino">FEMININO</label>
+            <input type="radio" name="sexo" id="feminino">
+
+            <label for="masculino">MASCULINO</label>
+            <input type="radio" name="sexo" id="masculino">
+
+            <button onclick="trocaSexo()">
+                TROCAR SEXO
+            </button>
+            
+        </div>
+    </div>
+
+    <script>
+
+        function trocaSexo(){
+            let feminino = document.getElementById("feminino")
+            let masculino = document.getElementById("masculino")
+
+            if (feminino.checked){
+                document.getElementById("imagemSexo").src="./img/feminino.jpg"
+            } else if (masculino.checked) {
+                document.getElementById("imagemSexo").src="./img/masculino.jpg"
+            } else {
+                document.getElementById("imagemSexo").src="./img/imagem.jpeg"
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
